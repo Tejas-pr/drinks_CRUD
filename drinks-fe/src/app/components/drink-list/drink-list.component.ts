@@ -19,8 +19,7 @@ export class DrinkListComponent {
   ngOnInit() {
     this.drinkService.getDrinks().subscribe(
       (response) => {
-        console.log('API Response:', response); // Debugging
-        this.drinks = response.drinks; // ✅ Extract array from object
+        this.drinks = response.drinks;
       },
       (error) => {
         console.error('Error fetching drinks:', error);
