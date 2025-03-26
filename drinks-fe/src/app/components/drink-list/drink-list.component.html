@@ -1,7 +1,11 @@
-<ul>
-  <li *ngFor="let drink of drinks">
-    <h3>
-      <a [routerLink]="['/drink', drink.id]">{{ drink.name }}</a>
-    </h3>
-  </li>
-</ul>
+<div class="container">
+  <h1>Available Drinks</h1>
+  <p>click any to get the nurtition value of each drink</p>
+  <ul class="drink-list">
+    <li *ngFor="let drink of drinks" class="drink-item">
+      <h3>
+        <a [routerLink]="['/drink', drink.id]" class="drink-link">{{ drink.name }}</a>
+      </h3>
+    </li>
+  </ul>
+</div>

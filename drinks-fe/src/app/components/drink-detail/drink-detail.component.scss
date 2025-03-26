@@ -1,0 +1,74 @@
+/* Style for the container */
+div {
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.1); /* Slight transparency */
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Drink title */
+  h2 {
+    color: #ffcc00; /* Gold color */
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+  
+  /* Description */
+  p {
+    color: #ddd;
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  /* Nutrition Facts Title */
+  h3 {
+    text-align: center;
+    color: #ff6600; /* Orange */
+    font-size: 22px;
+    margin-top: 20px;
+  }
+  
+  /* Nutrition Table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  /* Table Headers */
+  th {
+    background: #444;
+    color: #ffcc00; /* Gold */
+    padding: 12px;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+  
+  /* Table Rows */
+  td {
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  
+  /* Alternate Row Colors */
+  tbody tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.05);
+  }
+  
+  /* Message if no nutrition available */
+  p.no-nutrition {
+    color: #ff6666; /* Red */
+    text-align: center;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  

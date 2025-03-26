@@ -7,9 +7,11 @@ import { CommonModule } from '@angular/common';
   selector: 'app-drink-detail',
   imports: [CommonModule],
   templateUrl: './drink-detail.component.html',
+  styleUrl: './drink-detail.component.scss'
 })
 export class DrinkDetailComponent implements OnInit {
   drink: any;
+  nutrition: any[] = [];
 
   constructor(private route: ActivatedRoute, private drinkService: DrinkService) {}
 
@@ -19,6 +21,7 @@ export class DrinkDetailComponent implements OnInit {
       this.drinkService.getDrinkById(id).subscribe(
         (response) => {
           this.drink = response.data;
+          this.nutrition = response.nutrition;
         },
         (error) => {
           console.error('Error fetching drink details:', error);

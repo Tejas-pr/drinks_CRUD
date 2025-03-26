@@ -1,5 +1,26 @@
 <div *ngIf="drink">
-    <h2>{{ drink.name }}</h2>
-    <p>{{ drink.description }}</p>
-  </div>
-  
+  <h2>{{ drink.name }}</h2>
+  <p>{{ drink.description }}</p>
+
+  <h3>Nutrition Facts</h3>
+  <table *ngIf="nutrition.length > 0" border="1">
+    <thead>
+      <tr>
+        <th>Calories</th>
+        <th>Protein (g)</th>
+        <th>Carbs (g)</th>
+        <th>Fats (g)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of nutrition">
+        <td>{{ item.calories }}</td>
+        <td>{{ item.protein }}</td>
+        <td>{{ item.carbs }}</td>
+        <td>{{ item.fats }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p *ngIf="nutrition.length === 0">No nutrition information available.</p>
+</div>
